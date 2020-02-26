@@ -15,7 +15,7 @@ class Scraper
       student_data[:profile_url ] = student_cards[0].css("a").attribute("href").value
       students.push(student_data)
     }
-
+    students
   end
 
   def self.scrape_profile_page(profile_url)
