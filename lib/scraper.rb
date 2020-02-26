@@ -27,15 +27,18 @@ class Scraper
     #student_data[:blog] = student.css(".profile-quote").text
 
     binding.pry
-    student.css("social-icon-container").each do |social|
-      if social.attribute("href").value.include?("twitter")
-        student_profile[:twitter] = social.attribute("href").value
-      elsif social.attribute("href").value.include?("linkedin")
-        student_profile[:linkedin] = social.attribute("href").value
-      elsif social.attribute("href").value.include?("github")
-        student_profile[:github] = social.attribute("href").value
+
+    #student.css(".social-icon-container").css("a").attribute("href").value
+    student.css("social-icon-container").css("a").each do |social_media_data|
+      link = social_media_data.attribute("href").value
+      if link.include?("twitter")
+        student_profile[:twitter] = link
+      elsif link.include?("linkedin")
+        student_profile[:linkedin] = link
+      elsif link.include?("github")
+        student_profile[:github] = link
       else
-        student_profile[:blog] = social.attribute("href").value
+        student_profile[:blog] = link
       end
     end
     student_data
