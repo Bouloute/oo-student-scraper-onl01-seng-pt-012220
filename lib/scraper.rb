@@ -5,7 +5,7 @@ class Scraper
 
   def self.scrape_index_page(index_url)
     scraped = Nokogiri::HTML(index_url)
-    binding.pry
+    #  binding.pry
   end
 
   def self.scrape_profile_page(profile_url)
