@@ -29,6 +29,8 @@ class Scraper
   #  binding.pry
 
     #student.css(".social-icon-container").css("a").attribute("href").value
+    thing = student.css("social-icon-container").css("a")
+    binding.pry
     student.css("social-icon-container").css("a").each do |social_media_data|
       link = social_media_data.attribute("href").value
       binding.pry
