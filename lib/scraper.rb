@@ -7,7 +7,7 @@ class Scraper
     students = []
     scraped = Nokogiri::HTML(open(index_url))
     student_cards = scraped.css(".student-card")
-    #student_cards[0].css(".student-name").text == "Ryan Johnson"
+    
     student_cards.each {|student|
       student_data = {}
       student_data[:name] = student.css(".student-name").text
@@ -19,7 +19,9 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-
+    scraped = Nokogiri::HTML(open(index_url))
+    student_cards = scraped.css(".student-card")
+    binding.pry
   end
 
 end
