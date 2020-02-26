@@ -9,9 +9,11 @@ class Scraper
     student_cards = scraped.css(".student-card")
     #student_cards[0].css(".student-name").text == "Ryan Johnson"
     student_cards.each {|student|
-
+      students[:name] = student.css(".student-name").text
+      students[:location] = student.css(".student-location").text
+      binding.pry
     }
-    binding.pry
+    
   end
 
   def self.scrape_profile_page(profile_url)
