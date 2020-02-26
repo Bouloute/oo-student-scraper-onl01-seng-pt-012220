@@ -4,7 +4,7 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
-    scraped = Nokogiri::HTML(index_url)
+    scraped = Nokogiri::HTML(open(index_url))
       binding.pry
   end
 
