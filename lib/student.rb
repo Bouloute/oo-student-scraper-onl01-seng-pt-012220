@@ -14,6 +14,7 @@ class Student
     @profile_quote = student_hash[:profile_quote] if student_hash[:profile_quote]
     @bio = student_hash[:bio] if student_hash[:bio]
     @profile_url = student_hash[:profile_url] if student_hash[:profile_url]
+    
     @@all.push(self)
   end
 
@@ -22,7 +23,7 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-
+binding.pry
   end
 
   def self.all
