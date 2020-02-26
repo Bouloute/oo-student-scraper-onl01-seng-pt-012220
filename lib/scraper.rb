@@ -23,7 +23,6 @@ class Scraper
 
     student_data = {}
     student_data[:bio] = student.css(".description-holder").css("p").text
-    binding.pry
     student_data[:profile_quote] = student.css(".profile-quote").text
     student_data[:blog] = student.css(".profile-quote").text
     student_data[:profile_quote] = student.css(".profile-quote").text
