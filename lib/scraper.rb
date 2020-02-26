@@ -26,7 +26,7 @@ class Scraper
     student_data[:profile_quote] = student.css(".profile-quote").text
     #student_data[:blog] = student.css(".profile-quote").text
 
-    binding.pry
+  #  binding.pry
 
     #student.css(".social-icon-container").css("a").attribute("href").value
     student.css("social-icon-container").css("a").each do |social_media_data|
