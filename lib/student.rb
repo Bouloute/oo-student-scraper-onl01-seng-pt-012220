@@ -5,7 +5,7 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    binding.pry
+    @name = student_hash[:name] if student_hash[:name] != nil#, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url
   end
 
   def self.create_from_collection(students_array)
