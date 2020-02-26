@@ -12,7 +12,7 @@ class Scraper
       student_data = {}
       student_data[:name] = student.css(".student-name").text
       student_data[:location] = student.css(".student-location").text
-      student_data[:profile_url ] = student_cards[0].css("a").attribute("href").value
+      student_data[:profile_url ] = student.css("a").attribute("href").value
       students.push(student_data)
     }
     students
