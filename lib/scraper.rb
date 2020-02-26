@@ -24,11 +24,7 @@ class Scraper
     student_data = {}
     student_data[:bio] = student.css(".description-holder").css("p").text
     student_data[:profile_quote] = student.css(".profile-quote").text
-    #student_data[:blog] = student.css(".profile-quote").text
-
-  #  binding.pry
-
-    #student.css(".social-icon-container").css("a").attribute("href").value
+    
     student.css(".social-icon-container").css("a").each do |social_media_data|
       link = social_media_data.attribute("href").value
       if link.include?("twitter")
