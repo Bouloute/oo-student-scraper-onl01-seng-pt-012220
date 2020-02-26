@@ -9,7 +9,7 @@ class Scraper
     student_cards = scraped.css(".student-card")
     #student_cards[0].css(".student-name").text == "Ryan Johnson"
     student_cards.each {|student|
-      
+
     }
     binding.pry
   end
